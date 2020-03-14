@@ -1,0 +1,610 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-au" xml:lang="en-au">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" /><meta name="Description" content="Australian Government Department of Employment, Skills, Small and Family Business - Training.Gov.Au" /><meta name="Copyright" content="Copyright (©) 2011-2013 by Hammond Street Developments Pty. Ltd." /><meta name="Keywords" content="training, tp, vet, isc" />
+
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/Content/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/Content/images/favicon.ico" />
+
+
+    <link rel="stylesheet" type="text/css" href="/Content/Styles/Site.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/Content/Styles/print.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/Styles/redmond/jquery-ui-1.8.2.custom.css" />
+    <!--[if IE]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/IeStylesheet.css"/>
+    <![endif]-->
+    <!--[if IE 9]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie9Stylesheet.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie8Stylesheet.css"/>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie7Stylesheet.css"/>
+    <![endif]-->
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie6Stylesheet.css"/>
+    <![endif]-->
+
+
+    <script type="text/javascript" src="/Scripts/jquery-1.4.3.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-ui-1.8.2.custom.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.0.jstree.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.ba-bbq.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.watermark.js"></script>
+    <script type="text/javascript" src="/Scripts/shortcut.js"></script>
+    <script type="text/javascript" src="/Scripts/MicrosoftAjax.js"></script>
+    <script type="text/javascript" src="/Scripts/MicrosoftMvcAjax.js"></script>
+      <script type="text/javascript" src="/Scripts/MicrosoftMvcValidation.js"></script>
+    <script type="text/javascript" src="/Scripts/hsd.captcha.core.js"></script>
+    <script type="text/javascript" src="/Scripts/moment.min.js"></script>
+    <script type="text/javascript" src="/Scripts/deewr.tga.web.js"></script>
+    <script type="text/javascript" src="/Scripts/TelerikGridPager.js"></script>
+    <script type="text/javascript">
+        <!--
+        	var showAlertBoxes = true;
+        	var staticAssistant = false;
+        	var twoCol = false;
+
+            $(document).ready(function() {
+
+                shortcut.add("s", function() {
+                    window.location = "/Search";
+                    return false;
+	            },{
+	                'type':'keydown',
+                    'propagate':false,
+                    'disable_in_input':true,
+                    'target':document
+	            });
+
+                shortcut.add("h", function() {
+                    window.location = "/Home/Tga";
+                    return false;
+	            },{
+	                'type':'keydown',
+                    'propagate':false,
+                    'disable_in_input':true,
+                    'target':document
+	            });
+
+                $("body").bind("mousemove", function() {
+	                $("body").unbind("mousemove");
+	                showAlertBoxes = false;
+	            });
+
+                $('input').filter('$[value*=Submit]')
+                    .add($('input').filter('$[value*=submit]'))
+                    .add($('input').filter('$[value*=Add]'))
+                    .bind("click", function (e) {
+                    $("#fakelinktoerrormsg").focus();
+            });
+
+            });
+        //-->
+    </script>
+
+    <link type="text/css" href="/asset.axd?id=vQAAAB-LCAAAAAAABACrVkpRsoquVipQslJyzs8rSc0r0TcyMDTQM9YzNDQ0UNJRSgPL5wHlS1JzUosys_WS83Nz8_P0cjPz9JKLi4FK8pWsDGpja3VQjQkuqcxJLcZqQkl6IkKrIVBrrI5ScglYQUWJPkSmDMhFdUky0KnGZqZAhpJVSVFpai0ADM2Fk70AAAA%3d" rel="stylesheet"/>
+
+    <script type="text/javascript" src="/Scripts/cookieutils.js"></script>
+    <script type="text/javascript" src="/Scripts/showhistory.js"></script>
+    <title>training.gov.au - 41558 - 1 SDO TRAINING PTY LTD</title>
+    <script type="text/javascript" >
+
+        <!--
+
+        //function SortOutHistoryDisplay() {
+        //    var node = $("#displayHistory");
+
+
+        //    if (node.length) {
+        //        if (node.attr('checked')) {
+
+        //            $('div[id$="HistoryField"]').show();
+        //        } else {
+        //            $('div[id$="HistoryField"]').hide();
+        //        }
+        //    }
+        //}
+
+        function getWindow() {
+            var windowElement = $('#Window');
+            return windowElement.data('tWindow');
+        }
+
+        var dialogOpen = false;
+
+        function showHistory(RtoId, NrtId) {
+            var windowElement = $('#Window');
+            var window = getWindow();
+            window.content("Loading data...");
+            $.ajax({
+                type: "POST",
+                url: "/Organisation/AjaxScopeDeliveryNotificationHistoryWindow",
+                data: {"rtoId": RtoId,"NrtId":NrtId},
+                success: function (data) {
+                    window.content(data);
+                    $(window.element).find('h3').attr('tabIndex', '-1').focus();
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Failed to obtain history data.");
+                }
+            });
+
+            window.center();
+            window.open();
+            dialogOpen = true;
+            $('html,body').animate({ scrollTop: windowElement.offset().top }, 'slow');
+        }
+
+        function whenHistoryWindowClosed() {
+            RestoreWindowIfMaximised();
+            dialogOpen = false;
+            focusOnCodeFieldLink($('#nrtId').val());
+        }
+
+        function RestoreWindowIfMaximised() {
+            var window = getWindow();
+            // We don't want to remember maximizing as it affects the window being scrolled into view.
+            if (window.isMaximized) {
+                window.restore();
+            }
+        }
+
+        function closeWindow(id) {
+            var window = getWindow();
+            RestoreWindowIfMaximised(window);
+            window.close();
+            focusOnCodeFieldLink(id);
+        }
+
+        function focusOnCodeFieldLink(id) {
+            var viewHistoryAnchor = $("#" + id);
+            //var codeAnchor = $('td:first-child a', viewHistoryAnchor.closest('tr'));
+            viewHistoryAnchor.focus();
+
+        }
+
+        $(document).ready(function () {
+            //reset the display history link if javascript is enabled
+
+            $("a[class^=linkPrint]").querystring({ displayHistory: false });
+
+
+            //var showHistorycookie = getCookie("showHistory");
+            //if (showHistorycookie != undefined) {
+            //    if (showHistorycookie === "true") {
+            //        $("#displayHistory").attr('checked', true);
+            //        $('div[id$="HistoryField"]').show();
+            //        $("#detailsDisplayHistoryId").show();
+            //    } else {
+            //        $("#displayHistory").attr('checked', false);
+            //        //Hide history stuff if javascript is enabled
+            //        $('div[id$="HistoryField"]').hide();
+
+            //        $("#detailsDisplayHistoryId").show();
+            //    }
+            //} else {
+            //    setCookieForHistory("showHistory", false, 7);
+            //    $("#detailsDisplayHistoryId").show();
+            //}
+
+
+            ////Toggle the History based on user selection
+            //$("#displayHistory").change(function () {
+            //    //$('div[id$="HistoryField"]').toggle($("#displayHistory").attr("checked"));
+            //    if ($("#displayHistory").attr('checked')) {
+            //        setCookieForHistory("showHistory", true, 7);
+            //        //$("#displayHistory").val("false");
+            //        togglePrintHistory(true);
+            //    } else {
+            //        //$("#displayHistory").val("true");
+            //        togglePrintHistory(false);
+            //        setCookieForHistory("showHistory", false, 7);
+            //    }
+            //    SortOutHistoryDisplay();
+            //});
+
+            //$("#displayHistoryLabel").click(function () {
+
+            //    //$("#displayHistory").prop('checked',!$("#displayHistory").prop('checked'));
+            //    $("#displayHistory").click();
+            //    if ($("#displayHistory").attr('checked')) {
+            //        //$("#displayHistory").val("false");
+            //        togglePrintHistory(true);
+            //    } else {
+            //        //$("#displayHistory").val("true");
+            //        togglePrintHistory(false);
+            //    }
+            //    SortOutHistoryDisplay();
+                //$("#displayHistory").attr("checked", !$("#displayHistory").attr("checked"));
+////                return false;
+//            });
+
+
+//            //toggle the display of history (querystring) in the export to pdf and doc links
+//            function togglePrintHistory(flag) {
+//                $("a[class^=linkPrint]").querystring({ displayHistory: flag });
+//            }
+
+
+
+//            function onSelect(e) {
+//                SortOutHistoryDisplay();
+//            }
+
+        });
+
+
+
+
+        $(document).ready(function(e) {
+
+            if (document.addEventListener) {
+                document.addEventListener("focus", function(event) {
+
+                    var popup = document.getElementById("Window");
+
+
+                    if (popup != null) {
+                        if (dialogOpen && !popup.contains(event.target)) {
+                            event.stopPropagation();
+                            $(popup).find('a:first').focus();
+                        }
+                    }
+
+                }, true);
+            } else {
+                //IE8 fix
+                var tgalogo = document.getElementById("TGALogo");
+                if (tgalogo.attachEvent) {
+                    tgalogo.attachEvent("onfocus", function(event) {
+
+                        var popup = document.getElementById("Window");
+
+                        if (popup != null) {
+                            if (dialogOpen) {
+                                $(popup).find('a:first').focus();
+                            }
+                        }
+
+                    });
+                }
+            }
+        });
+        //-->
+    </script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl" : "http://www");
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-30207537-1']);
+_gaq.push(['_trackPageview']);
+(function(){
+var ga = document.createElement('script');
+ga.type = 'text/javascript';
+ga.async = true;
+ga.src = gaJsHost + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);})();
+</script>
+
+   <script type="text/javascript">
+    <!--
+    $(document).ready(function () {
+        if (getParameterByName("setFocus") != null) {
+            $("#" + getParameterByName("setFocus") + " a:first").focus();
+        }
+    });
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    //-->
+    </script>
+</head>
+<body>
+    <a onclick="topFunction()" id="scrollToTop" title="Back to top"><p class="scrollToTopText">^</p></a>
+
+
+<script>
+    var lastFocus;
+    $(document).ready(function () {
+        $('a').focusout(function () {
+            lastFocus = this;
+        });
+    });
+
+    //Bad code to get around skipping anchor in IE
+    function SkipFocus() {
+        var ntabindex = parseFloat(lastFocus.getAttribute('tabindex'));
+        if (ntabindex == 3 || ntabindex == 4) {
+            var nextElem = $('[tabindex=6]').focus();
+            if (nextElem != null) {
+                nextElem.focus();
+            }
+        } else if (ntabindex == 6) {
+            var prevElem;
+
+            prevElem = $('[tabindex=4]');
+
+            if (prevElem != null) {
+                prevElem.focus();
+            }
+        }
+    }
+
+    //drop down menu events
+    $(document).ready(function() {
+        $(".menudropdowncontent>a").focus(function() {
+            $(this).parent().css("z-index", "1");
+        });
+
+        $(".menudropdowncontent>a").focusout(function() {
+            $(this).parent().css("z-index", "");
+        });
+    });
+
+</script>
+
+<div id="page">
+
+    <div id="header">
+        <div id="title">
+            <a href="/Home/Tga" tabindex="1" title="Link to home" id="TGALogo">
+            <img src="/Content/images/training-logo-red-RGB-237.png" alt="training.gov.au - logo" />
+            </a>
+        </div>
+        <div id="accessibilityLinks">
+            <a href="#content" tabindex="2">Skip to content</a>
+            <a href="#navigation" tabindex="3">Skip to primary navigation</a>
+
+                <a href="#breadcrumbnavigation" tabindex="4">Skip to breadcrumb navigation</a>
+
+        </div>
+        <div id="headerLogoGov">
+            <img src="/Content/images/ausgov-stacked-w150.png" alt="Australian Government Logo" />
+        </div>
+
+        <div class="UpperMenu">
+
+                    <a href="https://training.gov.au:443/Account/SignIn?returnUrl=/Organisation/Details/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=0" tabindex="7" title="Link to sign in">Sign in</a>
+                    <a href="/Home/About" tabindex="6">About us</a>
+        </div>
+        <div id="menucontainer">
+            <span class="skipLink"><a name="navigation" id="navigation" tabindex="5" onfocus="SkipFocus();">&nbsp;</a></span> <!-- onfocus="SkipFocus();" -->
+            <div id="menuleft"  class="navbar t-MenuHeader">
+                <a href="/Home/Tga" title="Link to Home" tabindex="8" class="HomeIcon"><span class="accessibilityOnly">Link to home.</span></a><a href="/Search" tabindex="9" title="Link to search">Search</a><a href="/Reporting" tabindex="10" title="Link to reports">Reports</a><div class="menuDropDown">
+                    <a href="/Link" title="Link to resources" tabindex="11">Resources<span class="MenuArrow">&nbsp;&nbsp;&nbsp;</span></a>
+                    <div class="menudropdowncontent">
+                        <a href="/Link#AnchorAustralianGovernmentBodies" title="Link to Australian Government bodies resources" tabindex="12">Australian Government Bodies</a>
+                        <a href="/Link#TrainingPackageDevelopers" title="Link to Training Package Developers resources" tabindex="13">Training Package Developers</a>
+                        <a href="/Link#AnchorSTAs" title="Link to Regulatory Authorities resources" tabindex="14">Regulatory Authorities</a>
+                        <a href="/Link#AnchorRCABs" title="Link to State and Territory Government Training Departments resources" tabindex="15">State and Territory Government Training Departments</a>
+                        <a href="/Link#AnchorNationalVETWebsites" title="Link to National VET Websites resources" tabindex="16">National VET Websites</a>
+                    </div>
+                </div><div class="menuDropDown">
+                <a href="javascript:void(0)" tabindex="17">More<span class="MenuArrow">&nbsp;&nbsp;&nbsp;</span></a>
+                    <div class="menudropdowncontent">
+                        <a href="/Home/News" tabindex="18" title="Link to news">News</a><a href="/Home/Enquiry" tabindex="19" title="Link to frequently asked questions &amp; contact us">Frequently Asked Questions &amp; Contact Us</a>
+                    </div>
+                </div>
+                </div>
+                <div id="menuright"  class="navbar t-MenuHeader">
+
+                    <div style="padding: .25em .97em;">&nbsp;</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="layoutWrapper">
+
+
+<div id="oneColLayout">
+    <div id="breadcrumbs">
+        <span class="skipLink"><a name="breadcrumbnavigation" id="breadcrumbnavigation">&nbsp;</a></span>
+
+            <span class="accessibilityOnly">You are here: </span>
+            <ul class="breadcrumbs">
+	<li><a href="/Home/Tga">Home</a></li><li><a href="/Organisation">Organisation/RTO</a></li><li>Organisation details</li>
+</ul>
+    </div>
+
+    <div id="newQuickHelpDiv"></div>
+    <div class="layoutContentWrapper" id="layoutContentWrapper">
+
+        <span class="skipLink">
+            <a name="content" id="content" tabindex="-1">&nbsp;</a>
+        </span>
+        <div id="headerPrint">&nbsp;</div>
+
+    <div class="t-widget t-window" id="Window" style="display:none"><div class="t-window-titlebar t-header">&nbsp;<span class="t-window-title">Notification history</span><div class="t-window-actions t-header"><a class="t-window-action t-link" href="#"><span class="t-icon t-maximize">Maximize</span></a><a class="t-window-action t-link" href="#"><span class="t-icon t-close">Close</span></a></div></div><div class="t-window-content t-content" style="overflow:auto;width:800px;height:300px"></div></div>
+    <div id="printButtons" class="organisationPrintButtons">
+        <a class="linkPrintDoc" href="/Organisation/DetailsPrint?OrganisationId=273dc7ff-eb84-4beb-8290-98617634156c&amp;Format=docx&amp;displayHistory=true&amp;showImplicitScope=False" id="lnkPrintDoc" title="Export this information to Word">Export to Word</a>
+        <a class="linkPrintPdf" href="/Organisation/DetailsPrint?OrganisationId=273dc7ff-eb84-4beb-8290-98617634156c&amp;Format=pdf&amp;displayHistory=true&amp;showImplicitScope=False" id="lnkPrintPdf" title="Export this information to PDF">Export to PDF</a>
+        <a class="linkEmail" href="/ChangeNotification/NotificationAdd?OrganisationId=273dc7ff-eb84-4beb-8290-98617634156c&amp;ReturnTo=OrganisationDetails" id="lnkNotify" title="Notify me of changes to this Organisation">Notify me of changes</a>
+
+                <a href='http://www.myskills.gov.au/RegisteredTrainers/Details?rtocode=41558' title="External link to information on the MySkills web site" target="_blank" rel="noopener" class="linkMySkills">View this organisation on My Skills</a>
+
+
+
+    </div>
+
+    <h1>Organisation details</h1>
+    <br />
+    <h2>41558 - 1 SDO TRAINING PTY LTD</h2>
+    <span class="accessibilityOnly">The following 6 links change the content below.</span><div class="t-widget t-tabstrip t-header" id="rtoDetails"><ul class="t-reset t-tabstrip-items"><li class="t-item t-state-default t-state-active"><a class="t-link" href="#rtoDetails-1" id="detailsSummaryTab">Summary</a></li><li class="t-item t-state-default"><a class="t-link" href="/Organisation/AjaxDetailsLoadRegistration/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=1" id="detailsRegistrationTab">Registration</a></li><li class="t-item t-state-default"><a class="t-link" href="/Organisation/AjaxDetailsLoadContacts/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=2" id="detailsContactsTab">Contacts</a></li><li class="t-item t-state-default"><a class="t-link" href="/Organisation/AjaxDetailsLoadScope/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=3" id="detailsScopeTab">Scope</a></li><li class="t-item t-state-default"><a class="t-link" href="/Organisation/AjaxDetailsLoadRestrictions/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=4" id="detailsNotificationsTab">Regulatory Decision Information</a></li><li class="t-item t-state-default"><a class="t-link" href="/Organisation/AjaxDetailsLoadNotification/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=5" id="detailsRestrictionsTab">Delivery</a></li></ul>
+                <div class="details-display-history" id="detailsDisplayHistoryId"  style="display:none; margin-top: 40px; margin-bottom: 10px;">
+                    <input type="checkbox" id="displayHistory" name="displayHistory" title="Display history (below each table)" value="true" checked="checked"/>
+                    <a href="#" id="displayHistoryLabel" style="color:#1d60ff;cursor:pointer;">Display history</a>
+                </div>
+       <div class="t-content t-state-active" id="rtoDetails-1" style="display:block">
+<div class="outer">
+    <h2 class="legend">Summary</h2>
+    <div class="fieldset">
+
+            <div class="display-row">
+                <div class="display-label">Code:</div>
+                <div class="display-field-no-width">
+                    41558&nbsp;
+                </div>
+            </div>
+
+
+        <div class="display-row">
+            <div class="display-label">Legal name:</div>
+            <div class="display-field-unblocked-narrowest">
+                1 SDO TRAINING PTY LTD&nbsp;
+            </div>
+        </div>
+        <div class="display-row">
+            <div class="display-label">Trading name(s):</div>
+            <div class="display-field-unblocked-narrowest">
+                &nbsp;
+            </div>
+        </div>
+        <div class="display-row">
+
+
+                        <div class="display-label">Status:</div>
+            <div class="display-field-no-width">
+                    <span class="green">
+                Current</span></div>
+
+        </div>
+
+
+            <div class="display-row">
+                <div class="display-label">ABN:</div>
+                <div class="display-field-no-width">
+                <a href="http://www.abr.business.gov.au/search.aspx?SearchText=92167507806"title="View organisation on ABN Lookup"target="_blank" rel=="noopener">92 167 507 806
+<span class="accessibilityOnly">(external link)</span>
+<img src="/Content/images/openNewWindow.png" alt=""/>
+</a>
+
+                </div>
+            </div>
+
+            <div class="display-row">
+                <div class="display-label">ACN:</div>
+                <div class="display-field-no-width">
+                    167 507 806
+                </div>
+            </div>
+
+        <div class="display-row">
+            <div class="display-label">RTO type:</div>
+            <div class="display-field-unblocked-narrowest">
+                Education/training Business Or Centre: Privately Operated Registered Training Organisation
+
+            </div>
+        </div>
+            <div class="display-row">
+                <div class="display-label">Web address:</div>
+                <div class="display-field-no-width">
+                    <a href='http://www.1sdotraining.com.au' title='Visit the website for 1 SDO TRAINING PTY LTD.' target='_blank' rel='noopener'>http://www.1sdotraining.com.au <span class='accessibilityOnly'>(external link)</span><img src='/Content/images/openNewWindow.png' alt=''/></a>
+                </div>
+            </div>
+
+
+        <div id="summaryHistoryField">
+            <h3>Organisation code history</h3>
+
+            <div class="t-widget t-grid" id="Code-History"><table cellspacing="0" summary="Table listing Organisation code history" title="Table listing Organisation code history"><colgroup><col /><col style="width:80px" /><col style="width:80px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col"><a class="t-link" href="/Organisation/Details/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=0&amp;Code-History-orderBy=Code-asc" rel="nofollow">Code<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Organisation code history by the Code column</span></a></th><th class="t-header" scope="col"><a class="t-link" href="/Organisation/Details/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=0&amp;Code-History-orderBy=~" rel="nofollow">Start date<span class="t-icon t-arrow-down"></span><span class="accessibilityOnly">Sort Table listing Organisation code history by the Start date column</span></a></th><th class="t-last-header t-header" scope="col"><a class="t-link" href="/Organisation/Details/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=0&amp;Code-History-orderBy=EndDate-asc" rel="nofollow">End date<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Organisation code history by the End date column</span></a></th></tr></thead><tbody><tr><td>41558&nbsp;</td><td>04/Aug/2016</td><td class="t-last">&nbsp;</td></tr></tbody></table></div>
+            <br />
+             <h3>Responsible legal person history</h3>
+
+            <div class="t-widget t-grid" id="LegalPerson-History"><table cellspacing="0" summary="Table listing responsible legal person for Organisation/RTO" title="Table listing responsible legal person for Organisation/RTO"><colgroup><col /><col /><col /><col style="width:80px" /><col style="width:80px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Legal name</th><th class="t-header" scope="col">ACN</th><th class="t-header" scope="col">ABN</th><th class="t-header" scope="col">Start date</th><th class="t-last-header t-header" scope="col">End date</th></tr></thead><tbody><tr><td>1 SDO TRAINING PTY LTD&nbsp;</td><td>167 507 806</td><td>92167507806&nbsp;</td><td>04/Aug/2016</td><td class="t-last">&nbsp;</td></tr></tbody></table></div>
+            <br />
+            <h3>Web address history</h3>
+
+            <div class="t-widget t-grid" id="Url-History"><table cellspacing="0" summary="Table listing history urls for Organisation/RTO details" title="Table listing history urls for Organisation/RTO details"><colgroup><col /><col style="width:80px" /><col style="width:80px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Web address</th><th class="t-header" scope="col">Start date</th><th class="t-last-header t-header" scope="col">End date</th></tr></thead><tbody><tr><td><a href='http://www.1sdotraining.com.au' title='Visit the website for 1 SDO TRAINING PTY LTD.' target='_blank' rel='noopener'>http://www.1sdotraining.com.au <span class='accessibilityOnly'>(external link)</span><img src='/Content/images/openNewWindow.png' alt=''/></a></td><td>04/Aug/2016</td><td class="t-last">&nbsp;</td></tr></tbody></table></div>
+            <br />
+            <h3>Trading name history</h3>
+
+            No records to display.
+           <div class="historyClassification">
+                <h3>RTO type history</h3>
+                <div class="t-widget t-grid" id="tableClassificationsHistory"><table cellspacing="0" summary="Table listing complete Classifications history" title="Table listing complete Classifications history"><colgroup><col style="width:100px" /><col /><col style="width:80px" /><col style="width:80px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Code</th><th class="t-header" scope="col">Classification value</th><th class="t-header" scope="col">Start date</th><th class="t-last-header t-header" scope="col">End date</th></tr></thead><tbody><tr><td>91&nbsp;</td><td>Education/training Business Or Centre: Privately Operated Registered Training Organisation&nbsp;</td><td>04/Aug/2016</td><td class="t-last">&nbsp;</td></tr></tbody></table></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        SortOutHistoryDisplay();
+    </script></div><div class="t-content" id="rtoDetails-2"></div><div class="t-content" id="rtoDetails-3"></div><div class="t-content" id="rtoDetails-4"></div><div class="t-content" id="rtoDetails-5"></div><div class="t-content" id="rtoDetails-6"></div></div>
+
+
+
+
+        <div class="backtotop">
+            <a href="#navigation" title="Scroll back to the top of this page.">Back to top</a>
+        </div>
+    </div>
+
+
+</div>
+
+
+    </div>
+
+    <div id="layoutFooter">
+        <div id="footer">
+            <div id="logo">
+                <img src="/Content/images/stones-32x32-transparent.png" alt="TGA Logo stepping stones" />
+            </div>
+            <div id="version">
+
+                [Site version 3.14.7.1]
+            </div>
+            <div id="siteLinks">
+                <ul>
+                    <li><a href="/Home/TermsOfUse">Terms of use</a></li>
+                    <li><a href="/Home/PrivacyPolicy">Privacy policy</a></li>
+                    <li><a href="/Home/Copyright">Copyright</a></li>
+                    <li><a href="/Home/SiteMap">Site Map</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div><!--End of Page div-->
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.common.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.calendar.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.datepicker.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.editing.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.filtering.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.autocomplete.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.combobox.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.grouping.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.list.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.draganddrop.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.window.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.tabstrip.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function(){
+if (!jQuery.telerik) jQuery.telerik = {};
+jQuery.telerik.cultureInfo={"shortDate":"dd/MMM/yyyy","longDate":"dddd, d MMMM yyyy","longTime":"h:mm:ss tt","shortTime":"h:mm tt","fullDateTime":"dddd, d MMMM yyyy h:mm:ss tt","sortableDateTime":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","universalSortableDateTime":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","generalDateShortTime":"dd/MMM/yyyy h:mm tt","generalDateTime":"dd/MMM/yyyy h:mm:ss tt","monthDay":"d MMMM","monthYear":"MMMM yyyy","days":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"abbrDays":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"abbrMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"months":["January","February","March","April","May","June","July","August","September","October","November","December",""],"am":"AM","pm":"PM","dateSeparator":"/","timeSeparator":":","currencydecimaldigits":2,"currencydecimalseparator":".","currencygroupseparator":",","currencygroupsize":3,"currencynegative":1,"currencypositive":0,"currencysymbol":"$","numericdecimaldigits":2,"numericdecimalseparator":".","numericgroupseparator":",","numericgroupsize":3,"numericnegative":1,"percentdecimaldigits":2,"percentdecimalseparator":".","percentgroupseparator":",","percentgroupsize":3,"percentnegative":1,"percentpositive":1,"percentsymbol":"%"};
+jQuery('#Window').tWindow({onClose:whenHistoryWindowClosed, modal:false, draggable:false, resizable:false});
+jQuery('#rtoDetails').tTabStrip();
+jQuery('#Code-History').tGrid({columns:[{"title":"Code","member":"Code","type":"String"},{"title":"Start date","member":"StartDate","type":"Date","format":"{0:d}","order":"desc"},{"title":"End date","member":"EndDate","type":"Date","format":"{0:d}"}], urlFormat:'/Organisation/Details/273dc7ff-eb84-4beb-8290-98617634156c?Code-History-orderBy=%7B1%7D&tabIndex=0', pageSize:0, sortMode:'single', orderBy:'StartDate-desc'});
+jQuery('#LegalPerson-History').tGrid({columns:[{"title":"Legal name","member":"Name","type":"String"},{"title":"ACN","member":"Acn","type":"String"},{"title":"ABN","member":"AbnsText","type":"String"},{"title":"Start date","member":"StartDate","type":"Date","format":"{0:d}"},{"title":"End date","member":"EndDate","type":"Date","format":"{0:d}"}], urlFormat:'/Organisation/Details/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=0', pageSize:0});
+jQuery('#Url-History').tGrid({columns:[{},{"title":"Start date","member":"StartDate","type":"Date","format":"{0:d}"},{"title":"End date","member":"EndDate","type":"Date","format":"{0:d}"}], urlFormat:'/Organisation/Details/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=0', pageSize:0});
+jQuery('#TradingName-History').tGrid({columns:[{"title":"Trading name","member":"Name","type":"String"},{"title":"Start date","member":"StartDate","type":"Date","format":"{0:d}"},{"title":"End date","member":"EndDate","type":"Date","format":"{0:d}"}], urlFormat:'/Organisation/Details/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=0', pageSize:0});
+jQuery('#tableClassificationsHistory').tGrid({columns:[{"title":"Code","member":"Value.Value","type":"String"},{"title":"Classification value","member":"Value.Name","type":"String"},{"title":"Start date","member":"StartDate","type":"Date","format":"{0:d}"},{"title":"End date","member":"EndDate","type":"Date","format":"{0:d}"}], urlFormat:'/Organisation/Details/273dc7ff-eb84-4beb-8290-98617634156c?tabIndex=0', pageSize:0});});
+//]]>
+</script>
+</body>
+</html>
